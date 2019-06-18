@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-  
 import urllib  
 import json  
-  
+import sys
+
+reload(sys)   
+sys.setdefaultencoding('utf8')
+
 def getHtml(url):  
     page = urllib.urlopen(url)  
     html = page.read()  
     return html  
   
 if __name__ == '__main__':  
-    key = 'f5c5bfa69a624cd9a13de28d952ec0fc'
+    key = 'your_key'
     api = 'http://www.tuling123.com/openapi/api?key=' + key + '&info='  
     while True:  
         info = raw_input('我: ')  
